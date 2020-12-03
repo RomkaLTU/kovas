@@ -1,0 +1,54 @@
+@tailwind base;
+
+/** Import variables */
+@import "common/variables";
+
+@tailwind components;
+
+@import "common/fa/fontawesome";
+@import "common/fa/solid";
+@import "common/fa/regular";
+@import "common/fa/light";
+@import "common/fa/brands";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/forms";
+@import "components/wp-classes";
+@import "components/frontpage-swiper";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+@tailwind utilities;
+
+@font-face {
+  font-family: "Euclid Flex";
+  src: url("../fonts/EuclidFlex/EuclidFlex-Regular.woff2") format("woff2"), url("../fonts/EuclidFlex/EuclidFlex-Regular.woff") format("woff"), url("../fonts/EuclidFlex/EuclidFlex-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Euclid Flex";
+  src: url("../fonts/EuclidFlex/EuclidFlex-Medium.woff2") format("woff2"), url("../fonts/EuclidFlex/EuclidFlex-Medium.woff") format("woff"), url("../fonts/EuclidFlex/EuclidFlex-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Euclid Flex";
+  src: url("../fonts/EuclidFlex/EuclidFlex-Bold.woff2") format("woff2"), url("../fonts/EuclidFlex/EuclidFlex-Bold.woff") format("woff"), url("../fonts/EuclidFlex/EuclidFlex-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Euclid Flex";
+  src: url("../fonts/EuclidFlex/EuclidFlex-Light.woff2") format("woff2"), url("../fonts/EuclidFlex/EuclidFlex-Light.woff") format("woff"), url("../fonts/EuclidFlex/EuclidFlex-Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+}

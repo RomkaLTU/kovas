@@ -1,0 +1,120 @@
+.nav-primary {
+  position: absolute;
+  background-color: #fff;
+  z-index: 100;
+  width: 200px;
+  padding: 1rem;
+  right: 0;
+  top: 112px;
+
+  @screen md {
+    top: 163px;
+  }
+
+  @screen lg {
+    position: static;
+  }
+
+  .nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+
+    @screen lg {
+      flex-direction: row;
+    }
+
+    @screen xl {
+      padding-bottom: 2rem;
+    }
+  }
+
+  li:last-child a {
+    margin-right: 0;
+  }
+
+  li.active {
+    a {
+      @apply text-brand-3;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color 0.2s;
+
+    @screen lg {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      @apply text-brand-3;
+    }
+  }
+}
+
+.menu-open + .nav-primary {
+  display: block;
+}
+
+
+.header-bottom {
+  transition: all 0.3s;
+
+  &.scrolling-down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.scrolling-up {
+    position: fixed;
+    margin-top: 0;
+  }
+
+  &.scrolled-to {
+    &-top {
+      margin-top: 64px;
+
+      @screen lg {
+        margin-top: 68px;
+      }
+    }
+
+    &-bottom {
+      position: fixed;
+      margin-top: 0;
+    }
+  }
+}
+
+.admin-bar {
+  .header-bottom {
+    margin-top: 110px;
+
+    @screen lg {
+      margin-top: 100px;
+    }
+
+    &.scrolled-to-bottom,
+    &.scrolling-up {
+      margin-top: 46px;
+
+      @screen lg {
+        margin-top: 32px;
+      }
+    }
+
+    &.scrolled-to-top {
+      margin-top: 110px;
+
+      @screen lg {
+        margin-top: 100px;
+      }
+    }
+  }
+}
